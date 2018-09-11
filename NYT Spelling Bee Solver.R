@@ -40,7 +40,7 @@ for(i in 1:keyLetterLength){
 ########################################################################################################
 
 # imports a text bank to reference
-textDataAlpha <- read.table("C:/Users/Andrew/Desktop/R Data Files/Word Bank Alpha.txt")
+textDataAlpha <- read.table("C:/Users/Andrew/Desktop/R Data Files/Dictonary Word Bank.txt")
 
 # produces a vector with a string as each element
 textVector <- as.vector(textDataAlpha$V1)

@@ -5,9 +5,10 @@
 
 ########################################################################################################
 ########################################################################################################
+library(stringr)
 
 # sets working directory
-setwd("C:/Users/Andrew/Desktop/R Data Files/")
+setwd("C:/Users/Andrew/Desktop/R Data Files/Dict Text Files/")
 
 # function that receives a file name (should be a text file) and returns a vector of unique words from
 # that file
@@ -20,6 +21,7 @@ WordCollector <- function(fileName){
   textFile <- str_split(textFile, " ")
   
   # removes punctuation
+  #textFile2 <- gsub('[[:lower:]]', '', textFile) --- this line is for a particular class of txt dictionaries
   textFile2 <- gsub('[[:punct:] ]+' , ' ' , textFile)
   
   # reparses strings
@@ -68,5 +70,5 @@ for(i in 1:length(nameVector)){
 TotalSet <- unique(TotalSet)
 
 # used to print the new word bank to the working directory
-#write(TotalSet, file = "Word Bank.txt")
+#write(TotalSet, file = "Dictonary Word Bank.txt")
 
